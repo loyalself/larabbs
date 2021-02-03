@@ -174,7 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        //3.1 引入中文包
+        Overtrue\LaravelLang\TranslationServiceProvider::class
     ],
 
     /*
