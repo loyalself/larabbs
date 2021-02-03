@@ -1,3 +1,27 @@
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
+    <div class="container">
+        &lt;!&ndash; Branding Image &ndash;&gt;
+        <a class="navbar-brand " href="{{ url('/') }}">
+            LaraBBS
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  ariacontrols="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            &lt;!&ndash; Left Side Of Navbar &ndash;&gt;
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            &lt;!&ndash; Right Side Of Navbar &ndash;&gt;
+            <ul class="navbar-nav navbar-right">
+                &lt;!&ndash; Authentication Links &ndash;&gt;
+                <li class="nav-item"><a class="nav-link" href="{{route('login')}}">登录</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{route('register')}}">注册</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>-->
+
+<!-- 3.2 用户注册修改-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-static-top">
     <div class="container">
         <!-- Branding Image -->
@@ -14,9 +38,30 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                <li class="nav-item"><a class="nav-link" href="{{route('login')}}">登录</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route('register')}}">注册</a></li>
+                @guest
+                    <li class="nav-item"><a class="nav-link" href="{{route('login')}}">登录</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{route('register')}}">注册</a></li>
+                @else
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="https://cdn.learnku.com/uploads/avatars/18038_1571128011.jpeg!/both/380x380" class="img-responsive img-circle" width="30px" height="30px">
+                            {{ Auth::user()->name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="">个人中心</a>
+                            <a class="dropdown-item" href="">编辑资料</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" id="logout" href="#">
+                                <form action="{{ route('logout') }}" method="POST">
+                                    {{ csrf_field() }}
+                                    <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                                </form>
+                            </a>
+                        </div>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>
 </nav>
+
