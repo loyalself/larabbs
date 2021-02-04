@@ -12,7 +12,7 @@ class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Register Controller
+    | Register Controller  注册逻辑写在这个 trait 里
     |--------------------------------------------------------------------------
     |
     | This controller handles the registration of new users as well as their
