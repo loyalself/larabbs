@@ -25,6 +25,10 @@ class UsersController extends Controller
 
     public function edit(User $user)
     {
+        /**
+         * 因为继承的 controller 里使用了 AuthorizesRequests 这个 trait,这个trait里有 authorize 方法,
+         * 所以可以直接 $this->authorize()进行调用
+         */
         $this->authorize('update',$user);
         return view('users.edit', compact('user'));
     }
