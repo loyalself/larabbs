@@ -24,7 +24,8 @@ class UsersController extends Controller
         $data = $request->all();
 
         if($request->avatar){
-            $result = $imageUploadHandler->save($request->avatar, 'avatars', $user->id);
+            //max_width: 416 限制上传图片最大宽度
+            $result = $imageUploadHandler->save($request->avatar, 'avatars', $user->id, 416);
             if ($result) {
                 $data['avatar'] = $result['path'];
             }
