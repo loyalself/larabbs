@@ -116,3 +116,22 @@ body {
 #app > div.container {
     margin-bottom: 100px;
 }
+
+/* 防止编辑器内容框复制图片内容超出 */
+.simditor-body img {
+    max-width:100%;
+}
+
+/*话题列表页*/
+@import "topic_body";
+.topics-show-page {
+    .card {
+        padding: 15px;
+
+        h1 {
+            margin: 0.4em auto 0.6em;
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }
+}
