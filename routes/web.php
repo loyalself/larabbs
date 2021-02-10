@@ -40,3 +40,4 @@ Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit'); //
 Route::patch('/users/{user}', 'UsersController@update')->name('users.update'); //处理 edit 页面提交的更改
 
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
