@@ -39,6 +39,13 @@ Route::get('/users/{user}', 'UsersController@show')->name('users.show');      //
 Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit'); //显示编辑个人资料页面
 Route::patch('/users/{user}', 'UsersController@update')->name('users.update'); //处理 edit 页面提交的更改
 
-Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+/**
+ * URI 最后一个参数表达式 {slug?} , ? 意味着参数可选，这是为了兼容我们数据库中 Slug 为空的话题数据。
+ * 这种写法可以同时兼容以下两种链接：
+ * 1. http://larabbs.test/topics/115
+ * 2. http://larabbs.test/topics/115/slug-translation-test
+ */
+Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
