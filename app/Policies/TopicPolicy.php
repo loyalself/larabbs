@@ -15,11 +15,12 @@ class TopicPolicy extends Policy
      */
     public function update(User $user, Topic $topic)
     {
-         return $topic->user_id == $user->id;
+        //return $topic->user_id == $user->id;
+        return $user->isAuthorOf($topic);  //优化
     }
-
+    //只允许作者对话题有删除权限
     public function destroy(User $user, Topic $topic)
     {
-        return true;
+        return $user->isAuthorOf($topic);
     }
 }
