@@ -54,7 +54,7 @@ class TopicsController extends Controller
 	{
         $topic->fill($request->all());
         $topic->user_id = Auth::id();
-        $topic->save();
+        $res = $topic->save();
         return redirect()->route('topics.show', $topic->id)->with('success', '帖子创建成功！');
 	}
 
