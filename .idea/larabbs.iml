@@ -125,6 +125,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/horizon" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-permission" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/viacreative/sudo-su" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/summerblue/administrator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ckeditor/ckeditor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
