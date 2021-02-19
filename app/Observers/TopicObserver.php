@@ -5,6 +5,7 @@ namespace App\Observers;
 use App\Handlers\SlugTranslateHandler;
 use App\Jobs\TranslateSlug;
 use App\Models\Topic;
+use Illuminate\Support\Facades\DB;
 
 // creating, created, updating, updated, saving,
 // saved,  deleting, deleted, restoring, restored
@@ -38,9 +39,14 @@ class TopicObserver
         }*/
     }
 
-    public function creating(Topic $topic)
+    /**
+     * 当话题被删除的时候，数据库里的回复信息没有存在的价值，只会占用空间。
+     * 所以接下来我们将监听话题删除成功的事件，在此事件发生时，我们会删除此话题下所有的回复
+     * @param Topic $topic
+     */
+    public function deleted(Topic $topic)
     {
-        //
+        DB::table('replies')->where('topic_id', $topic->id)->delete();
     }
 
     /**
