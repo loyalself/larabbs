@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Topic extends Model
 {
@@ -26,6 +27,14 @@ class Topic extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    /**
+     * 一个话题下可以有很多个回复,一对多
+     * @return HasMany
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 
     /**

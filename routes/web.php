@@ -49,3 +49,5 @@ Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload
  * 2. http://larabbs.test/topics/115/slug-translation-test
  */
 Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');
+
+Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
