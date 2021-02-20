@@ -14,8 +14,8 @@ return [
      |
      */
 
-    //'enabled' => env('DEBUGBAR_ENABLED', null), default config value
-    'enabled' => env('APP_DEBUG', false),
+    'enabled' => env('DEBUGBAR_ENABLED', false), //default config value
+    //'enabled' => env('APP_DEBUG', false),
     'except' => [
         'telescope*',
         'horizon*'
