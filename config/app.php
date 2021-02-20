@@ -175,7 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         //3.1 引入中文包
-        Overtrue\LaravelLang\TranslationServiceProvider::class
+        Overtrue\LaravelLang\TranslationServiceProvider::class,
+
+        App\Providers\EasySmsServiceProvider::class,
     ],
 
     /*
