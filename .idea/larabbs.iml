@@ -127,6 +127,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/viacreative/sudo-su" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/summerblue/administrator" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/ckeditor/ckeditor" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/fractal" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dingo/blueprint" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dingo/api" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
