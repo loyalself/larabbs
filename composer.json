@@ -10,7 +10,10 @@
     "require": {
         "php": "^7.1.3",
         "ext-json": "*",
+        "dingo/api": "^2.0.0-alpha2",
+        "doctrine/dbal": "2.6",
         "fideloper/proxy": "^4.0",
+        "gregwar/captcha": "1.x",
         "hieu-le/active": "~3.5",
         "intervention/image": "^2.5",
         "laravel/framework": "5.7.*",
@@ -18,6 +21,7 @@
         "laravel/tinker": "^1.0",
         "mews/captcha": "~2.0",
         "mews/purifier": "~2.0",
+        "overtrue/easy-sms": "1.x",
         "overtrue/laravel-lang": "~3.0",
         "overtrue/pinyin": "~3.0",
         "predis/predis": "~1.1",
