@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="33bd4283-275a-487b-bec1-a272e21870ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Observers/UserObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/UserObserver.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/TopicObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/TopicObserver.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +184,14 @@
       <workItem from="1612920051056" duration="16872000" />
       <workItem from="1613697695943" duration="1103000" />
       <workItem from="1613699662608" duration="14042000" />
-      <workItem from="1613723406849" duration="4762000" />
+      <workItem from="1613723406849" duration="5128000" />
+      <workItem from="1613783706075" duration="92000" />
+      <workItem from="1613784566506" duration="82000" />
+      <workItem from="1613786784340" duration="784000" />
+      <workItem from="1613790825075" duration="115000" />
+      <workItem from="1613790990204" duration="4000" />
+      <workItem from="1613791246407" duration="48000" />
+      <workItem from="1614246504031" duration="548000" />
     </task>
     <servers />
   </component>

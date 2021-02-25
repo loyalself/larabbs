@@ -21,7 +21,8 @@ class TopicObserver
         /**
          *  问题:
          *  $topic->body = clean($topic->body, 'user_topic_body');
-         * 当添加这行代码保存话题时报错:Array and string offset access syntax with curly braces is deprecated
+         * 当添加这行代码保存话题时报错:Array and string offset access syntax with curly braces is deprecated:
+         *   是因为当前 xss 过滤插件版本不兼容的问题
          */
         //$topic->body = clean($topic->body, 'user_topic_body');
         $topic->excerpt = make_excerpt($topic->body);
